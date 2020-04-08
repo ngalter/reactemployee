@@ -1,18 +1,26 @@
-.searchbox button {
-    border: 1px solid #101D42;
-}
-
-.searchbox button:hover {
-    background-color: coral;
-    color: #ffffff;
+.input-group-text {
+    background-color: white;
+    border: none;
 }
 .searchbox {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.input-group {
 margin: 0 auto;
-width: 30%;
+width: 40%;
+}
+.input {
+   margin: 0 auto;
+   width: 80%;
+}
+.form-control {
+    font-size: .9em;
+    background-color: #f6f6f6;
 }
 @media only screen and (max-width: 760px) {
-    .searchbox {
+    .input-group {
         margin: 0 auto;
-        width: 80%; 
+        width: 60%; 
     }
 }

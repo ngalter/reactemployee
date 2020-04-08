@@ -25,22 +25,22 @@ const DataArea = () => {
       .map(elem => elem.order)
       .toString();
     
-      if (currentOrder === "descend") {
-        currentOrder = "ascend";
-      } else {
-        currentOrder = "descend";
-      }
+    if (currentOrder === "descend") {
+      currentOrder = "ascend";
+    } else {
+      currentOrder = "descend";
+    }
 
     const compareFnc = (a, b) => {
-      if (currentOrder === "ascend") {
-    
-          if (a[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
+      if (currentOrder === "ascend") {   
+        // ascending
+        if (a[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
             return 1;
-          } else if (b[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
+        } else if (b[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
             return -1;
-          }
+        }
 
-        if (heading === "name (l,f)") {
+        else if (heading === "name (l,f)") {
           return a["name"].last.localeCompare(b["name"].last);
         } else if (heading === "age") {
           return a["dob"].age - b["dob"].age;
@@ -49,20 +49,21 @@ const DataArea = () => {
         } else {
           return a[heading].localeCompare(b[heading]);
         }
-        } else {
-          if (a[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
+      } else {
+         // descending
+         if (a[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
             return 1;
-          } else if (b[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
+         } else if (b[heading] === undefined && heading !== "age" && heading !== "state" && heading !== "name (l,f)") {
             return -1;
           }
-        if (heading === "name (l,f)") {
+        else if (heading === "name (l,f)") {
           return b["name"].last.localeCompare(a["name"].last);
         } else if (heading === "age") {
           return b["dob"].age - a["dob"].age;
         } else if (heading=="state") {
           return b["location"].state.localeCompare(a["location"].state);
         } else {
-          return b[heading].localeCompare(a[heading]);
+        return b[heading].localeCompare(a[heading]);
         }
       }
     };
@@ -99,7 +100,8 @@ const DataArea = () => {
       setDeveloperState({
         ...developerState,
         employees: results.data.results,
-        filteredEmployees: results.data.results
+        filteredEmployees: results.data.results,
+        sortedEmployees: results.data.results
       });
     });
   }, []);

@@ -15,18 +15,22 @@ text-align: left;
 .colHead {
   text-transform: capitalize;
 }
-
+.colHead:last-child {
+  color: transparent;
+}
+table thead {
+  background-color: whitesmoke;
+}
 .datatable .col .pointer:after {
   font-size: 80%;
-  content: "";
-  margin-right: 18px;
+  content: " ⬇️";
+  margin-right: 0;
 }
 
 .datatable .col .pointer:hover:after {
   font-size: 80%;
-  content: " 🔽";
+  content: " ⏬";
   margin-right: 0;
-
 } 
 
 @media only screen and (max-width: 760px) {

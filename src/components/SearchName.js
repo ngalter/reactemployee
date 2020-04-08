@@ -10,7 +10,7 @@ const SearchName = () => {
       <div className="input-group">
           <div className="input-group-prepend">
             <span className="input-group-text" id="">
-              Search
+              Search:
             </span>
           </div> 
           <input

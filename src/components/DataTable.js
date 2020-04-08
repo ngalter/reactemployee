@@ -8,7 +8,7 @@ const DataTable = () => {
 
   return (
 
-    <div className="datatable mt-2">
+    <div className="datatable">
       <table
         id="table"
         className="table table-hover"
@@ -22,7 +22,6 @@ const DataTable = () => {
                   key={name}
                   style={{ width }}
                   onClick={() => {
-                    context.handleSort(name.toLowerCase());
                     context.handleSort(name);
                   }}
                 >
