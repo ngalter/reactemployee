@@ -1,0 +1,40 @@
+table {
+border-collapse: collapse;
+text-align: left;
+}
+.alignCenter {
+  text-align: center;
+}
+.makeHidden {
+  display: none;
+}
+
+.datatable .col {
+  cursor: pointer;
+} 
+.colHead {
+  text-transform: capitalize;
+}
+
+.datatable .col .pointer:after {
+  font-size: 80%;
+  content: "";
+  margin-right: 18px;
+}
+
+.datatable .col .pointer:hover:after {
+  font-size: 80%;
+  content: " 🔽";
+  margin-right: 0;
+
+} 
+
+@media only screen and (max-width: 760px) {
+  table {
+    font-size: .6em;
+    border-spacing: 0px;
+  }
+    img {
+      width: 80%;
+    }
+}

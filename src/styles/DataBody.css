@@ -1,0 +1,8 @@
+.name-cell {
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.img-circle {
+    border-radius: 100px;
+}
