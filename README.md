@@ -3,7 +3,7 @@
 ## Overview
 For this assignment: create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
 
-<img width="1000" alt="budget tracker" src="https://github.com/ngalter/budget/blob/master/directory.png">
+<img width="1000" alt="employee directory" src="https://github.com/ngalter/reactemployee/blob/master/directory.png">
 
 ## Employee Directory 
 The React Employee Directory provides the user with access to the the employee's name, email, state, age and image.
